@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:muynaak/features/login/screen/login_screen.dart';
 import 'package:muynaak/routes/router.dart';
 import 'package:muynaak/theme/app_theme.dart';
 
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'App Main',
+      title: 'MuyNaak',
       theme: appTheme,
       onGenerateRoute: AppRouter.generateRoute,
       initialRoute: '/',
