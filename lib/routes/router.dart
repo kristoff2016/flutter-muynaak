@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:muynaak/features/home/screens/home_screen.dart';
 import 'package:muynaak/features/login/screen/login_screen.dart';
+import 'package:muynaak/features/reports/screen/reports_screen.dart';
 
 class AppRouter {
   static bool isLoggedIn = true;
@@ -13,6 +14,8 @@ class AppRouter {
             : MaterialPageRoute(builder: (_) => const LoginScreen());
       case '/login':
         return MaterialPageRoute(builder: (_) => const LoginScreen());
+      case '/reports':
+        return MaterialPageRoute(builder: (_) => const ReportsScreen());
       default:
         return MaterialPageRoute(
           builder: (_) => const Scaffold(
