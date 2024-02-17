@@ -16,4 +16,4 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 
 
-![Project Logo](./image.png)
+![Project Logo](./image.png){:width="200px" height="150px"}
