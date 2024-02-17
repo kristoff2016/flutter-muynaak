@@ -32,9 +32,17 @@ class HomeScreen extends StatelessWidget {
               shape: BoxShape.rectangle,
               borderRadius: BorderRadius.circular(10.0),
               border: Border.all(color: Colors.white, width: 0),
+              boxShadow: const [
+                BoxShadow(
+                  color: Color.fromARGB(255, 3, 144, 8),
+                  spreadRadius: 0,
+                  blurRadius: 40,
+                  offset: Offset(0, 0),
+                ),
+              ],
             ),
-            child: const Padding(
-              padding: EdgeInsets.all(5),
+            child: Padding(
+              padding: const EdgeInsets.all(5),
               child: SingleChildScrollView(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -42,13 +50,13 @@ class HomeScreen extends StatelessWidget {
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
-                      padding: EdgeInsets.fromLTRB(5, 15, 5, 10),
+                      padding: const EdgeInsets.fromLTRB(5, 15, 5, 10),
                       child: Align(
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Padding(
+                            const Padding(
                               padding: EdgeInsets.fromLTRB(15, 10, 0, 0),
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.start,
@@ -91,8 +99,10 @@ class HomeScreen extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 TextButton(
-                                  onPressed: null,
-                                  child: Row(
+                                  onPressed: () {
+                                    Navigator.pushNamed(context, '/login');
+                                  },
+                                  child: const Row(
                                     children: [
                                       Icon(
                                         Icons.account_balance_wallet,
@@ -115,7 +125,7 @@ class HomeScreen extends StatelessWidget {
                                     ],
                                   ),
                                 ),
-                                TextButton(
+                                const TextButton(
                                   onPressed: null,
                                   child: Row(
                                     children: [
